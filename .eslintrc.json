@@ -7,10 +7,7 @@
     "prettier",
     "plugin:react/recommended"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "react"
-  ],
+  "plugins": ["@typescript-eslint", "react"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
@@ -19,6 +16,7 @@
     }
   },
   "rules": {
+    "no-unneeded-ternary": "error",
     "@typescript-eslint/no-unused-vars": [
       1,
       {
