@@ -22,7 +22,6 @@ const Modal = forwardRef<HTMLDialogElement, DialogProps>(function Dialog(
 
   return (
     <dialog
-      {...rest}
       aria-labelledby={titleID}
       className={clsx(rest.className, 'rounded-md border')}
       aria-hidden={!isOpen}
