@@ -27,7 +27,7 @@ const Modal = forwardRef<HTMLDialogElement, DialogProps>(function Dialog(
       aria-hidden={!isOpen}
       ref={ref}
     >
-      <div className='bg-white p-4'>
+      <div className='w-full p-4'>
         <div
           className={clsx(
             !renderTitle ? 'justify-end' : 'justify-between',
