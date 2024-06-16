@@ -26,8 +26,8 @@ const navigationProps: Navigation = {
   ],
   footer: [
     {
-      label: 'About',
-      href: '/about',
+      label: 'Chi siamo',
+      href: '/chi-siamo',
     },
   ],
 }
