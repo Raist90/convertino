@@ -1,4 +1,6 @@
 import { Carousel } from '@/components/Carousel'
+import { Services } from '@/components/Services'
+import { homepageProps } from '@/lib'
 import React from 'react'
 
 /**
@@ -9,6 +11,7 @@ export default function Page() {
   return (
     <>
       <Carousel />
+      <Services {...homepageProps.servicesProps} />
     </>
   )
 }

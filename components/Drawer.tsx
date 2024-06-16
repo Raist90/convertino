@@ -12,7 +12,7 @@ function Drawer({ children, isOpen }: DrawerProps) {
     <div
       className={clsx(
         isOpen ? 'block' : 'hidden',
-        'absolute z-10 w-full border-b border-black bg-white p-4 pt-0',
+        'w-full border-b border-black p-4 pt-0',
       )}
     >
       <div>{children}</div>
