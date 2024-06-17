@@ -1,17 +1,44 @@
 export { Header }
 
+import { assert } from '@/helpers/assert'
+import { useTheme } from '@/helpers/useTheme'
 import { globalProps } from '@/lib'
 import clsx from 'clsx'
-import { SquareMenu, X } from 'lucide-react'
-import React, { useState } from 'react'
+import { Moon, SquareMenu, Sun, X } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
 import { Drawer } from './Drawer'
 import { Navigation } from './Navigation'
+import { ThemeSwitcher } from './ThemeSwitcher'
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  function handleClick(): void {
+  const storedTheme = useTheme()
+
+  let [isOpen, setIsOpen] = useState(false)
+  let [theme, setTheme] = useState(storedTheme)
+  let [mounted, setMounted] = useState(false)
+
+  const handleClick = (): void => {
     setIsOpen(!isOpen)
   }
+
+  const toggleTheme = (): void => {
+    const updatedTheme = theme === 'light' ? 'dark' : 'light'
+    localStorage.setItem('prefered-theme', updatedTheme)
+    setTheme(updatedTheme)
+  }
+
+  useEffect(() => setMounted(true), [])
+
+  useEffect(() => {
+    const root = document.documentElement
+    root.classList.remove('light', 'dark')
+
+    const errMsg = "Couldn't retrieve Theme inside <Header> component"
+    assert(theme, errMsg)
+    root.classList.add(theme)
+  }, [theme])
+
+  if (!mounted) return
 
   return (
     <>
@@ -30,6 +57,8 @@ function Header() {
           )}
         </button>
         <h1 className='font-bold'>Logo</h1>
+
+        <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
       </header>
       <Drawer isOpen={isOpen}>
         <Navigation {...globalProps.navigationProps} />
@@ -40,7 +69,10 @@ function Header() {
         role='banner'
       >
         <h1 className='font-bold'>Logo</h1>
+
         <Navigation {...globalProps.navigationProps} />
+
+        <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
       </header>
     </>
   )
