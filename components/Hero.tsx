@@ -5,6 +5,8 @@ import clsx from 'clsx'
 import { useId } from 'react'
 import { Link } from './Link'
 
+const MAX_TITLE_LENGTH = 20
+
 type HeroProps = {
   cta: LinkType & {
     text: string
@@ -16,6 +18,7 @@ type HeroProps = {
 
 function Hero({ cta, image, title, ...rest }: HeroProps) {
   const titleID = useId()
+  const isOverMaxChars = title.length >= MAX_TITLE_LENGTH
 
   return (
     <section
@@ -28,12 +31,17 @@ function Hero({ cta, image, title, ...rest }: HeroProps) {
         src={image.src}
       />
 
-      <div className='absolute top-[50%] z-[1] w-full translate-y-[-50%] text-center'>
-        <h2 id={titleID} className='text-5xl'>
+      <div className='absolute top-[50%] z-[1] w-full translate-y-[-50%] text-balance text-center'>
+        <h2
+          id={titleID}
+          className={clsx(
+            isOverMaxChars ? 'mb-2 text-3xl font-bold' : 'mb-5 text-5xl',
+          )}
+        >
           {title}
         </h2>
-        <div className='mx-auto mt-5 lg:w-1/3'>
-          <p className='text-balance text-xl'>{cta.text}</p>
+        <div className='mx-auto px-4 lg:w-1/2 lg:px-0'>
+          <p className='lg:text-lg'>{cta.text}</p>
           <Link className='mx-auto mt-5 inline-block' href={cta.label}>
             <span className='button-base button-primary inline-block'>
               {cta.label}

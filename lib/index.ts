@@ -1,5 +1,6 @@
 export { globalProps, homepageProps }
 
+import slide1 from '@/assets/4.png'
 import type { Hero } from '@/components/Hero'
 import { Services } from '@/components/Services'
 import { PICSUM_API } from '@/constants'
@@ -37,19 +38,19 @@ const slideProps: ComponentProps<typeof Hero>[] = [
   {
     cta: {
       href: '/',
-      label: 'Click me',
-      text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo',
+      label: 'Contattaci',
+      text: 'Specialisti nel noleggio di piattaforme aeree e nella realizzazione di lavori e ristrutturazioni',
     },
     image: {
       alt: 'Banner',
-      src: `${PICSUM_API}/2000?random=1`,
+      src: slide1,
     },
-    title: 'A title',
+    title: 'Benvenuti su Convertino SRL',
   },
   {
     cta: {
       href: '/',
-      label: 'Click me',
+      label: 'Contattaci',
       text: 'Ligula, ut, Cras In mus. mollis dui.',
     },
     image: {
@@ -61,7 +62,7 @@ const slideProps: ComponentProps<typeof Hero>[] = [
   {
     cta: {
       href: '/',
-      label: 'Click me',
+      label: 'Contattaci',
       text: 'Dapibus. vel, nec, Cum justo. Aenean consequat',
     },
     image: {
@@ -75,31 +76,27 @@ const slideProps: ComponentProps<typeof Hero>[] = [
 const servicesProps: ComponentProps<typeof Services> = {
   services: [
     {
-      title: 'Cras Aenean ipsum viverra',
+      list: [
+        'Piattaforme autocarrate',
+        'Piattaforme semoventi',
+        'Piattaforme verticali',
+        'Ragni e piattaforme cingolate',
+      ],
+      title: 'Noleggio piattaforme aeree',
       text: [
-        'Augue. a, ridiculus quis leo nascetur eu, laoreet. Natoque eu imperdiet metus dolor. Eleifend lorem eu, pede varius enim. adipiscing ullamcorper dui. Ligula, Aenean imperdiet.',
-        'Aenean ut tellus. tellus. sociis ut, ultricies et massa. Felis, quam sit Aliquam rhoncus magnis sem. Consequat mus. Dapibus pretium',
+        'Offriamo una vasta gamma di piattaforme aeree per qualsiasi tipo di lavoro in quota. Le nostre attrezzature sono moderne, sicure e regolarmente manutenute. Tra le nostre proposte:',
       ],
     },
     {
-      title: 'Sociis montes, quis, ligula, enim Etiam',
-      text: [
-        'Pellentesque felis, dictum ultricies leo pede Cum lorem tellus. Imperdiet.pretium. Nulla eleifend quam montes, justo, dapibus Aenean Donec varius justo,Aenean Donec porttitor vulputate vulputate Aenean justo.',
-        'Aenean ac, aliquet nisi. Ullamcorper metus magnis',
+      list: [
+        'Ristrutturazioni interne ed esterne',
+        'Rifacimento facciate',
+        'Manutenzione edifici',
+        'Realizzazione di nuove costruzioni',
       ],
-    },
-    {
-      title: 'Nec, vel commodo quam mus. ligula, vitae, sit',
+      title: 'Lavori e ristrutturazioni',
       text: [
-        'Quis, vulputate Nullam porttitor Aliquam felis, sociis felis eu quam pretium ultricies Phasellus Aenean Vivamus eu, nec.',
-        'Donec quis Donec Aenean consequat dolor pellentesque rutrum. arcu. eleifend ante, mollis consequat eu, Etiam In ultricies a, dapibus.',
-      ],
-    },
-    {
-      title: 'Aenean massa Aenean justo, Phasellus mus.',
-      text: [
-        'Sociis massa consequat justo, Donec justo, ultricies pellentesque dapibus ligula quis, feugiat aliquet Curabitur elementum Aenean a.',
-        'et ipsum leo eleifend pretium Aenean quis ante, commodo eget, imperdiet. porttitor arcu. pede',
+        'Il nostro team di esperti è specializzato in una vasta gamma di servizi di ristrutturazione e manutenzione. Dal piccolo intervento alla ristrutturazione completa, ci occupiamo di:',
       ],
     },
   ],

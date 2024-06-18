@@ -11,9 +11,7 @@ export default function LayoutDefault({
 }) {
   return (
     <>
-      <div className='sticky top-0 z-[1] bg-white/70 backdrop-blur-md'>
-        <Header />
-      </div>
+      <Header />
       {children}
     </>
   )

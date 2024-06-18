@@ -1,10 +1,11 @@
 export { Header }
 
+import logo from '@/assets/convertino-logo-var1.png'
 import { assert } from '@/helpers/assert'
 import { useTheme } from '@/helpers/useTheme'
 import { globalProps } from '@/lib'
 import clsx from 'clsx'
-import { Moon, SquareMenu, Sun, X } from 'lucide-react'
+import { SquareMenu, X } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { Drawer } from './Drawer'
 import { Navigation } from './Navigation'
@@ -40,8 +41,9 @@ function Header() {
 
   if (!mounted) return
 
+  /** @todo Refactor with LogoWrapper and Image components */
   return (
-    <>
+    <div className='sticky top-0 z-[1] bg-white/70 backdrop-blur-md'>
       <header
         className={clsx(
           !isOpen && 'border-b border-black',
@@ -56,7 +58,11 @@ function Header() {
             <X aria-hidden='true' />
           )}
         </button>
-        <h1 className='font-bold'>Logo</h1>
+        <div className='w-[120px]'>
+          <h1>
+            <img className='h-full w-full object-cover' alt='Logo' src={logo} />
+          </h1>
+        </div>
 
         <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
       </header>
@@ -68,12 +74,16 @@ function Header() {
         className='hidden items-center justify-around p-4 md:flex'
         role='banner'
       >
-        <h1 className='font-bold'>Logo</h1>
+        <div className='w-[120px]'>
+          <h1>
+            <img className='h-full w-full object-cover' alt='Logo' src={logo} />
+          </h1>
+        </div>
 
         <Navigation {...globalProps.navigationProps} />
 
         <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
       </header>
-    </>
+    </div>
   )
 }
