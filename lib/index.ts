@@ -2,6 +2,7 @@ export { globalProps, homepageProps }
 
 import { default as slide1, default as textMedia1 } from '@/assets/4.png'
 import type { Hero } from '@/components/Hero'
+import { Mission } from '@/components/Mission'
 import { Services } from '@/components/Services'
 import { TextMedia } from '@/components/TextMedia'
 import { PICSUM_API } from '@/constants'
@@ -119,13 +120,23 @@ const textMediaProps: ComponentProps<typeof TextMedia> = {
   ],
 }
 
+const missionProps: ComponentProps<typeof Mission> = {
+  title: 'La nostra Mission',
+  texts: [
+    "La nostra mission è quella di facilitare il lavoro dei nostri clienti offrendo attrezzature all'avanguardia e servizi di ristrutturazione eseguiti da personale qualificato.",
+    'Puntiamo a diventare il vostro partner di fiducia, assicurando sempre la massima soddisfazione.',
+  ],
+}
+
 type HomepageProps = {
+  missionProps: typeof missionProps
   servicesProps: typeof servicesProps
   slideProps: typeof slideProps
   textMediaProps: typeof textMediaProps
 }
 
 const homepageProps: HomepageProps = {
+  missionProps,
   servicesProps,
   slideProps,
   textMediaProps,
