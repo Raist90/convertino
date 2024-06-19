@@ -1,5 +1,6 @@
 import { Carousel } from '@/components/Carousel'
 import { Services } from '@/components/Services'
+import { TextMedia } from '@/components/TextMedia'
 import { homepageProps } from '@/lib'
 import React from 'react'
 
@@ -12,6 +13,7 @@ export default function Page() {
     <>
       <Carousel />
       <Services {...homepageProps.servicesProps} />
+      <TextMedia {...homepageProps.textMediaProps} />
     </>
   )
 }

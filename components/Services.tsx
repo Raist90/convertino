@@ -16,7 +16,7 @@ function Services({ services }: Services) {
   return (
     <section className='my-20 p-4 lg:mx-auto lg:w-10/12'>
       <div className='text-center'>
-        <h2 className='mb-4 text-3xl font-bold'>I nostri servizi</h2>
+        <h2 className='title-2'>I nostri servizi</h2>
         <p>
           Scopri i nostri servizi e la nostra ampia gamma di soluzioni per
           privati e aziende.

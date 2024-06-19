@@ -1,8 +1,9 @@
 export { globalProps, homepageProps }
 
-import slide1 from '@/assets/4.png'
+import { default as slide1, default as textMedia1 } from '@/assets/4.png'
 import type { Hero } from '@/components/Hero'
 import { Services } from '@/components/Services'
+import { TextMedia } from '@/components/TextMedia'
 import { PICSUM_API } from '@/constants'
 import type { Navigation } from '@/types'
 import type { ComponentProps } from 'react'
@@ -102,14 +103,32 @@ const servicesProps: ComponentProps<typeof Services> = {
   ],
 }
 
+const textMediaProps: ComponentProps<typeof TextMedia> = {
+  image: {
+    alt: '',
+    src: textMedia1,
+  },
+  texts: [
+    {
+      title: 'La nostra storia',
+      paragraphs: [
+        'Da oltre 40 anni, Convertino SRL offre servizi di alta qualità nel settore delle piattaforme aeree e delle ristrutturazioni.',
+        'La nostra esperienza e professionalità ci rendono un punto di riferimento nel mercato. Siamo orgogliosi di fornire soluzioni su misura per ogni tipo di progetto, garantendo sicurezza, efficienza e risultati eccellenti.',
+      ],
+    },
+  ],
+}
+
 type HomepageProps = {
   servicesProps: typeof servicesProps
   slideProps: typeof slideProps
+  textMediaProps: typeof textMediaProps
 }
 
 const homepageProps: HomepageProps = {
   servicesProps,
   slideProps,
+  textMediaProps,
 }
 
 type GlobalProps = {

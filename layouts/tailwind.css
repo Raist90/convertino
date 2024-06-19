@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Buttons */
 .button-base {
   @apply border border-black p-2 uppercase;
 }
 
 .button-primary {
   @apply bg-red-500 text-white;
+}
+
+/* Headings */
+.title-2 {
+  @apply mb-4 text-3xl font-bold;
+}
+
+/* Text */
+.text-sticky {
+  @apply md:sticky md:bottom-12 md:place-self-end;
 }
