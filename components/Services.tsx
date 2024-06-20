@@ -1,7 +1,8 @@
 export { Services }
 
 import { isArray } from '@/helpers/predicates'
-import React from 'react'
+import React, { useId } from 'react'
+import { Title } from './Title'
 
 type Services = {
   services: {
@@ -13,17 +14,22 @@ type Services = {
 
 /** @todo Refactor into ServiceCard component */
 function Services({ services }: Services) {
-  return (
-    <section className='my-20 p-4 lg:mx-auto lg:w-10/12'>
-      <div className='text-center'>
-        <h2 className='title-2'>I nostri servizi</h2>
-        <p>
-          Scopri i nostri servizi e la nostra ampia gamma di soluzioni per
-          privati e aziende.
-        </p>
-      </div>
+  const titleID = useId()
 
-      <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-2'>
+  const titleProps = {
+    id: titleID,
+    title: 'I nostri servizi',
+    text: 'Scopri i nostri servizi e la nostra ampia gamma di soluzioni per privati e aziende.',
+  }
+
+  return (
+    <section
+      aria-labelledby={titleID}
+      className='my-20 p-4 lg:mx-auto lg:w-10/12'
+    >
+      <Title {...titleProps} />
+
+      <div className='mt-16 grid gap-8 md:grid-cols-2'>
         {services.map((service) => (
           <div
             key={service.title}

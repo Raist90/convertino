@@ -3,6 +3,7 @@ export { globalProps, homepageProps }
 import { default as slide1, default as textMedia1 } from '@/assets/4.png'
 import type { Hero } from '@/components/Hero'
 import { Mission } from '@/components/Mission'
+import { Rental } from '@/components/Rental'
 import { Services } from '@/components/Services'
 import { TextMedia } from '@/components/TextMedia'
 import { PICSUM_API } from '@/constants'
@@ -128,8 +129,37 @@ const missionProps: ComponentProps<typeof Mission> = {
   ],
 }
 
+const rentalProps: ComponentProps<typeof Rental> = {
+  title: 'Come Funziona il Noleggio?',
+  text: 'Noleggiare una piattaforma aerea da Convertino SRL è semplice e veloce:',
+  steps: [
+    {
+      title: 'Scegli la piattaforma',
+      text: 'Consulta il nostro catalogo e scegli l’attrezzatura più adatta alle tue esigenze.',
+    },
+    {
+      title: 'Richiedi un preventivo',
+      text: 'Contattaci per un preventivo gratuito e senza impegno.',
+    },
+    {
+      title: 'Conferma il noleggio',
+      text: 'Una volta confermato, organizzeremo la consegna della piattaforma nel luogo e nel momento da te indicati.',
+    },
+  ],
+  benefits: {
+    title: 'Vantaggi del noleggio',
+    list: [
+      'Attrezzature all’avanguardia',
+      'Consegna e ritiro a domicilio',
+      'Assistenza tecnica dedicata',
+      'Flessibilità nei tempi di noleggio',
+    ],
+  },
+}
+
 type HomepageProps = {
   missionProps: typeof missionProps
+  rentalProps: typeof rentalProps
   servicesProps: typeof servicesProps
   slideProps: typeof slideProps
   textMediaProps: typeof textMediaProps
@@ -137,6 +167,7 @@ type HomepageProps = {
 
 const homepageProps: HomepageProps = {
   missionProps,
+  rentalProps,
   servicesProps,
   slideProps,
   textMediaProps,

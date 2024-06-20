@@ -13,7 +13,7 @@ function Mission({ title, texts }: MissionProps) {
 
   return (
     <section
-      className='relative my-36 text-balance py-20 backdrop-blur'
+      className='relative my-20 text-balance py-20 backdrop-blur'
       aria-labelledby={titleID}
     >
       <div className='mx-auto w-10/12'>
