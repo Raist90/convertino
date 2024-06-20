@@ -2,6 +2,7 @@ export { Rental }
 
 import rentalBG from '@/assets/4.png'
 import { useId } from 'react'
+import { Media } from './Media'
 import { Title } from './Title'
 
 type Benefit = {
@@ -58,9 +59,10 @@ function Rental({ title, text, steps, benefits }: RentalProps) {
           </ul>
         </div>
 
-        <div className='w-full lg:col-span-8'>
-          <img alt='' className='h-full w-full object-cover' src={rentalBG} />
-        </div>
+        <Media
+          className='w-full lg:col-span-8'
+          image={{ alt: '', src: rentalBG }}
+        />
       </div>
     </section>
   )

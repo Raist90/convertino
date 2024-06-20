@@ -2,6 +2,7 @@ export { TextMedia }
 
 import { Image } from '@/types'
 import React from 'react'
+import { Media } from './Media'
 
 type Text = {
   title: string
@@ -16,13 +17,7 @@ type TextMediaProps = {
 function TextMedia({ image, texts }: TextMediaProps) {
   return (
     <section className='mb-20 mt-36 grid gap-x-12 gap-y-8 md:grid-cols-2'>
-      <div className='aspect-[1] w-full'>
-        <img
-          className='h-full w-full object-cover'
-          alt={image.alt}
-          src={image.src}
-        />
-      </div>
+      <Media className='aspect-[1] w-full' image={image} />
 
       <div className='text-sticky text-balance py-4'>
         {texts.map((text) => (

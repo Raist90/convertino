@@ -4,6 +4,7 @@ import type { Image, Link as LinkType } from '@/types'
 import clsx from 'clsx'
 import { useId } from 'react'
 import { Link } from './Link'
+import { Media } from './Media'
 
 const MAX_TITLE_LENGTH = 20
 
@@ -17,18 +18,18 @@ type HeroProps = {
 }
 
 function Hero({ cta, image, title, ...rest }: HeroProps) {
+  const { className } = rest
   const titleID = useId()
   const isOverMaxChars = title.length >= MAX_TITLE_LENGTH
 
   return (
     <section
       aria-labelledby={titleID}
-      className={clsx(rest.className, 'relative h-[500px] lg:h-[500px]')}
+      className={clsx(className, 'relative h-[500px] lg:h-[500px]')}
     >
-      <img
-        className='h-full w-full object-cover'
-        alt={image.alt}
-        src={image.src}
+      <Media
+        className={clsx(className, 'relative h-[500px] lg:h-[500px]')}
+        image={image}
       />
 
       <div className='absolute top-[50%] z-[1] w-full translate-y-[-50%] text-balance text-center'>

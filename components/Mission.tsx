@@ -2,6 +2,7 @@ export { Mission }
 
 import missionBG from '@/assets/4.png'
 import { useId } from 'react'
+import { Media } from './Media'
 
 type MissionProps = {
   title: string
@@ -30,9 +31,10 @@ function Mission({ title, texts }: MissionProps) {
         ))}
       </div>
 
-      <div className='absolute left-0 top-0 -z-[1] h-full w-full opacity-10'>
-        <img alt='' className='h-full w-full object-cover' src={missionBG} />
-      </div>
+      <Media
+        className='absolute left-0 top-0 -z-[1] h-full w-full opacity-10'
+        image={{ alt: '', src: missionBG }}
+      />
     </section>
   )
 }

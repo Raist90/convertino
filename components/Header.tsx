@@ -8,6 +8,7 @@ import clsx from 'clsx'
 import { SquareMenu, X } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { Drawer } from './Drawer'
+import { Media } from './Media'
 import { Navigation } from './Navigation'
 import { ThemeSwitcher } from './ThemeSwitcher'
 
@@ -58,11 +59,9 @@ function Header() {
             <X aria-hidden='true' />
           )}
         </button>
-        <div className='w-[120px]'>
-          <h1>
-            <img className='h-full w-full object-cover' alt='Logo' src={logo} />
-          </h1>
-        </div>
+        <h1>
+          <Media className='w-[120px]' image={{ alt: 'Logo', src: logo }} />
+        </h1>
 
         <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
       </header>
@@ -74,11 +73,9 @@ function Header() {
         className='hidden items-center justify-around p-4 md:flex'
         role='banner'
       >
-        <div className='w-[120px]'>
-          <h1>
-            <img className='h-full w-full object-cover' alt='Logo' src={logo} />
-          </h1>
-        </div>
+        <h1>
+          <Media className='w-[120px]' image={{ alt: 'Logo', src: logo }} />
+        </h1>
 
         <Navigation {...globalProps.navigationProps} />
 
