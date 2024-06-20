@@ -1,4 +1,5 @@
 import { Carousel } from '@/components/Carousel'
+import { Gallery } from '@/components/Gallery'
 import { Mission } from '@/components/Mission'
 import { Rental } from '@/components/Rental'
 import { Services } from '@/components/Services'
@@ -18,6 +19,7 @@ export default function Page() {
       <TextMedia {...homepageProps.textMediaProps} />
       <Mission {...homepageProps.missionProps} />
       <Rental {...homepageProps.rentalProps} />
+      <Gallery {...homepageProps.galleryProps} />
     </>
   )
 }

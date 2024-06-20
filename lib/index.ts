@@ -1,6 +1,7 @@
 export { globalProps, homepageProps }
 
 import { default as slide1, default as textMedia1 } from '@/assets/4.png'
+import { Gallery } from '@/components/Gallery'
 import type { Hero } from '@/components/Hero'
 import { Mission } from '@/components/Mission'
 import { Rental } from '@/components/Rental'
@@ -157,7 +158,31 @@ const rentalProps: ComponentProps<typeof Rental> = {
   },
 }
 
+const galleryProps: ComponentProps<typeof Gallery> = {
+  images: [
+    {
+      alt: '',
+      src: slide1,
+    },
+    {
+      alt: '',
+      src: slide1,
+    },
+    {
+      alt: '',
+      src: slide1,
+    },
+    {
+      alt: '',
+      src: slide1,
+    },
+  ],
+  title: 'I nostri lavori',
+  text: 'Dai un’occhiata ad alcuni dei nostri progetti più recenti e scopri come abbiamo aiutato i nostri clienti a realizzare i loro obiettivi. La qualità del nostro lavoro parla per noi.',
+}
+
 type HomepageProps = {
+  galleryProps: typeof galleryProps
   missionProps: typeof missionProps
   rentalProps: typeof rentalProps
   servicesProps: typeof servicesProps
@@ -166,6 +191,7 @@ type HomepageProps = {
 }
 
 const homepageProps: HomepageProps = {
+  galleryProps,
   missionProps,
   rentalProps,
   servicesProps,
