@@ -31,24 +31,9 @@ const navigationProps: Navigation = {
       href: '/#contattaci',
     },
   ],
-  footer: [
-    {
-      label: 'Servizi',
-      href: '/#servizi',
-    },
-    {
-      label: 'Chi siamo',
-      href: '/#chi-siamo',
-    },
-    {
-      label: 'Noleggio',
-      href: '/#noleggio',
-    },
-    {
-      label: 'Contattaci',
-      href: '/#contattaci',
-    },
-  ],
+  footer: {
+    text: 'CONVERTINO S.R.L., VIA SPECCHIOLLA ZONA IND.LE – 72019 SAN VITO DEI NORMANNI (BR) – P.IVA/C.F. 01898970742',
+  },
 }
 
 const slideProps: ComponentProps<typeof Hero>[] = [

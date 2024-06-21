@@ -5,5 +5,7 @@ import type { Link } from './partials'
 
 type Navigation = {
   header: Link[]
-  footer: Link[]
+  footer: {
+    text: string
+  }
 }
