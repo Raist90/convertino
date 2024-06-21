@@ -50,7 +50,7 @@ function Gallery({ images, title, text }: GalleryProps) {
           {images.map((image, idx) => (
             <Media
               key={idx + 2}
-              className='h-[350px] flex-[0_0_70%] pl-2 md:h-[700px] md:flex-[0_0_50%]'
+              className='h-[350px] flex-[0_0_70%] pl-2 md:h-[500px] md:flex-[0_0_34%]'
               image={image}
             />
           ))}
