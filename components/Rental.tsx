@@ -22,6 +22,7 @@ type RentalProps = {
   benefits: Benefit
 }
 
+/** @todo Refactor by using RentalStepCard component */
 function Rental({ title, text, steps, benefits }: RentalProps) {
   const { list: benefitsList } = benefits
   const titleID = useId()
@@ -36,9 +37,9 @@ function Rental({ title, text, steps, benefits }: RentalProps) {
           {steps.map((step, idx) => (
             <div
               key={step.title}
-              className='rounded-sm border border-gray-400 bg-red-50 p-4 shadow-md shadow-red-300 duration-300 ease-in-out hover:-translate-y-4'
+              className='rounded-sm border border-gray-400 bg-red-50 p-4 duration-300 ease-in-out hover:-translate-y-4 dark:border-red-500 dark:bg-red-700'
             >
-              <p className='mb-3 inline-block rounded-full border bg-white px-3 py-1 text-xl font-bold shadow-inner shadow-red-500'>
+              <p className='mb-3 inline-block rounded-full border bg-white px-3 py-1 text-xl font-bold shadow-inner shadow-red-500 dark:bg-dark-primary'>
                 {idx + 1}
               </p>
               <h3 className='mb-2 font-bold uppercase'>{step.title}</h3>

@@ -51,7 +51,7 @@ function Hero({ cta, image, title, ...rest }: HeroProps) {
         </div>
       </div>
 
-      <div className='absolute left-0 top-0 h-full w-full bg-white/70' />
+      <div className='absolute left-0 top-0 h-full w-full bg-white/70 dark:bg-dark-primary/60' />
     </section>
   )
 }

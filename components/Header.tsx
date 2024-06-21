@@ -42,12 +42,12 @@ function Header() {
 
   if (!mounted) return
 
-  /** @todo Refactor with LogoWrapper and Image components */
+  /** @todo Refactor with LogoWrapper */
   return (
-    <div className='sticky top-0 z-[1] bg-white/70 backdrop-blur-md'>
+    <div className='sticky top-0 z-[1] bg-white/70 backdrop-blur-md dark:bg-dark-primary/70'>
       <header
         className={clsx(
-          !isOpen && 'border-b border-black',
+          !isOpen && 'border-b border-black dark:border-red-700',
           'flex items-center justify-between p-4 md:hidden',
         )}
         role='banner'
@@ -70,7 +70,7 @@ function Header() {
       </Drawer>
 
       <header
-        className='hidden items-center justify-around p-4 md:flex'
+        className='hidden items-center justify-around border-b border-black p-4 dark:border-red-700 md:flex'
         role='banner'
       >
         <h1>
