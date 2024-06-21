@@ -1,6 +1,7 @@
 export { globalProps, homepageProps }
 
 import { default as slide1, default as textMedia1 } from '@/assets/4.png'
+import { Contacts } from '@/components/Contacts'
 import { Gallery } from '@/components/Gallery'
 import type { Hero } from '@/components/Hero'
 import { Mission } from '@/components/Mission'
@@ -27,7 +28,7 @@ const navigationProps: Navigation = {
     },
     {
       label: 'Contattaci',
-      href: '/contattaci',
+      href: '/#contattaci',
     },
   ],
   footer: [
@@ -45,7 +46,7 @@ const navigationProps: Navigation = {
     },
     {
       label: 'Contattaci',
-      href: '/contattaci',
+      href: '/#contattaci',
     },
   ],
 }
@@ -193,7 +194,37 @@ const galleryProps: ComponentProps<typeof Gallery> = {
   text: 'Dai un’occhiata ad alcuni dei nostri progetti più recenti e scopri come abbiamo aiutato i nostri clienti a realizzare i loro obiettivi. La qualità del nostro lavoro parla per noi.',
 }
 
+const contactsProps: ComponentProps<typeof Contacts> = {
+  infos: [
+    {
+      type: 'phone',
+      text: '+39 355 624 2449',
+    },
+    {
+      type: 'email',
+      text: 'info@convertinoedilizia.it',
+    },
+    {
+      type: 'address',
+      text: 'Viale Francia 72019 San Vito dei Normanni, Puglia',
+    },
+  ],
+  socials: [
+    {
+      type: 'fb',
+      href: 'https://www.facebook.com/profile.php?id=100067893503970',
+    },
+    {
+      type: 'ig',
+      href: 'https://www.instagram.com/convertinosrl/',
+    },
+  ],
+  title: 'Contattaci',
+  text: 'Hai bisogno di un preventivo o vuoi maggiori informazioni sui nostri servizi? Non esitare a contattarci. Siamo a tua disposizione per rispondere a tutte le tue domande.',
+}
+
 type HomepageProps = {
+  contactsProps: typeof contactsProps
   galleryProps: typeof galleryProps
   missionProps: typeof missionProps
   rentalProps: typeof rentalProps
@@ -203,6 +234,7 @@ type HomepageProps = {
 }
 
 const homepageProps: HomepageProps = {
+  contactsProps,
   galleryProps,
   missionProps,
   rentalProps,
