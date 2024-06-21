@@ -29,7 +29,7 @@ function Rental({ title, text, steps, benefits }: RentalProps) {
   const titleProps = { id: titleID, title, text }
 
   return (
-    <section aria-labelledby={titleID}>
+    <section id='noleggio' aria-labelledby={titleID}>
       <div className='my-20 px-4 lg:mx-auto lg:w-10/12'>
         <Title {...titleProps} />
 

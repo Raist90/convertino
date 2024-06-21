@@ -1,7 +1,7 @@
 export { TextMedia }
 
 import { Image } from '@/types'
-import React from 'react'
+import React, { useId } from 'react'
 import { Media } from './Media'
 
 type Text = {
@@ -15,15 +15,24 @@ type TextMediaProps = {
 }
 
 function TextMedia({ image, texts }: TextMediaProps) {
+  const titleID = useId()
+
   return (
-    <section className='mb-20 mt-36 grid gap-x-12 gap-y-8 md:grid-cols-2'>
+    <section
+      id='chi-siamo'
+      aria-labelledby={titleID}
+      className='mb-20 mt-36 grid gap-x-12 gap-y-8 md:grid-cols-2'
+    >
       <Media className='aspect-[1] w-full' image={image} />
 
       <div className='text-sticky text-balance py-4'>
         {texts.map((text) => (
           <React.Fragment key={text.title}>
             <div className='pl-8 md:pl-0'>
-              <h2 className='title-2 border-b border-solid border-red-500 pb-1'>
+              <h2
+                id={titleID}
+                className='title-2 border-b border-solid border-red-500 pb-1'
+              >
                 {text.title}
               </h2>
             </div>

@@ -14,26 +14,38 @@ import type { ComponentProps } from 'react'
 const navigationProps: Navigation = {
   header: [
     {
-      label: 'Chi siamo',
-      href: '/chi-siamo',
+      label: 'Servizi',
+      href: '/#servizi',
     },
     {
-      label: 'Servizi',
-      href: '/servizi',
+      label: 'Chi siamo',
+      href: '/#chi-siamo',
+    },
+    {
+      label: 'Noleggio',
+      href: '/#noleggio',
     },
     {
       label: 'Contattaci',
       href: '/contattaci',
     },
-    {
-      label: 'Dove siamo',
-      href: '/dove-siamo',
-    },
   ],
   footer: [
     {
+      label: 'Servizi',
+      href: '/#servizi',
+    },
+    {
       label: 'Chi siamo',
-      href: '/chi-siamo',
+      href: '/#chi-siamo',
+    },
+    {
+      label: 'Noleggio',
+      href: '/#noleggio',
+    },
+    {
+      label: 'Contattaci',
+      href: '/contattaci',
     },
   ],
 }
