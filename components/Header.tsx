@@ -15,9 +15,9 @@ import { ThemeSwitcher } from './ThemeSwitcher'
 function Header() {
   const storedTheme = useTheme()
 
-  let [isOpen, setIsOpen] = useState(false)
-  let [theme, setTheme] = useState(storedTheme)
-  let [mounted, setMounted] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [theme, setTheme] = useState(storedTheme)
+  const [mounted, setMounted] = useState(false)
 
   const handleClick = (): void => {
     setIsOpen(!isOpen)

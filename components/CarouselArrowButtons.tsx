@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import React from 'react'
 
 export { CarouselArrowButtons }
 

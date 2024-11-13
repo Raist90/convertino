@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
-import { useId, type ComponentProps } from 'react'
+import React, { useId, type ComponentProps } from 'react'
 import { Link } from './Link'
 import { Title } from './Title'
 
@@ -79,7 +79,7 @@ function Contacts({ infos, socials, title, text }: ContactsProps) {
           <ul className='flex gap-2'>
             {socials.map((social) => (
               <li key={social.type}>
-                <a href={social.href} target='_blank'>
+                <a href={social.href} target='_blank' rel='noreferrer'>
                   {socialList[social.type]}
                 </a>
               </li>

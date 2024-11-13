@@ -2,7 +2,7 @@ export { Modal }
 
 import clsx from 'clsx'
 import { X } from 'lucide-react'
-import { forwardRef, useId } from 'react'
+import React, { forwardRef, useId } from 'react'
 
 type DialogProps = {
   children: React.ReactNode

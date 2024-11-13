@@ -3,7 +3,7 @@ export { Gallery }
 import { Image } from '@/types'
 import useEmblaCarousel from 'embla-carousel-react'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import { ComponentProps, useCallback, useId } from 'react'
+import React, { ComponentProps, useCallback, useId } from 'react'
 import { CarouselArrowButtons } from './CarouselArrowButtons'
 import { Media } from './Media'
 import { Title } from './Title'

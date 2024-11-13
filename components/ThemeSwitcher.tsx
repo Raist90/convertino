@@ -1,5 +1,6 @@
 import { assert } from '@/helpers/assert'
 import { Moon, Sun } from 'lucide-react'
+import React from 'react'
 
 export { ThemeSwitcher }
 

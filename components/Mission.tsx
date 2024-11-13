@@ -1,7 +1,7 @@
 export { Mission }
 
 import missionBG from '@/assets/4.png'
-import { useId } from 'react'
+import React, { useId } from 'react'
 import { Media } from './Media'
 
 type MissionProps = {

@@ -2,7 +2,7 @@ export { Hero }
 
 import type { Image, Link as LinkType } from '@/types'
 import clsx from 'clsx'
-import { useId } from 'react'
+import React, { useId } from 'react'
 import { Link } from './Link'
 import { Media } from './Media'
 
@@ -43,7 +43,7 @@ function Hero({ cta, image, title, ...rest }: HeroProps) {
         </h2>
         <div className='mx-auto px-4 lg:w-1/2 lg:px-0'>
           <p className='lg:text-lg'>{cta.text}</p>
-          <Link className='mx-auto mt-5 inline-block' href={cta.label}>
+          <Link className='mx-auto mt-5 inline-block' href={cta.href}>
             <span className='button-base button-primary inline-block'>
               {cta.label}
             </span>

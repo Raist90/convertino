@@ -1,7 +1,7 @@
 export { Rental }
 
-import rentalBG from '@/assets/4.png'
-import { useId } from 'react'
+import rentalBG from '@/assets/2.BxWC46XE.jpg'
+import React, { useId } from 'react'
 import { Media } from './Media'
 import { Title } from './Title'
 

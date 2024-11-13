@@ -1,6 +1,7 @@
 export { Footer }
 
 import type { Navigation } from '@/types'
+import React from 'react'
 
 function Footer({ footer }: Navigation) {
   const { text } = footer

@@ -4,6 +4,7 @@ import { homepageProps } from '@/lib'
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import React from 'react'
 import { Hero } from './Hero'
 
 function Carousel() {

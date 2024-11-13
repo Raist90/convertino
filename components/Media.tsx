@@ -1,6 +1,7 @@
 export { Media }
 
 import { Image } from '@/types'
+import React from 'react'
 
 type MediaProps = {
   className: string

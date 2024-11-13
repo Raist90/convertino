@@ -1,4 +1,5 @@
 export { Drawer }
+import React from 'react'
 
 type DrawerProps = {
   children: React.ReactNode

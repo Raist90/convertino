@@ -1,5 +1,7 @@
 export { Title }
 
+import React from 'react'
+
 type TitleProps = {
   id: string
   title: string

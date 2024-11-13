@@ -1,6 +1,7 @@
 export { Navigation }
 
 import { Navigation as NavigationType } from '@/types'
+import React from 'react'
 import { Link } from './Link'
 
 function Navigation({ header: links }: NavigationType) {
